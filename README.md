@@ -46,7 +46,7 @@ intent, err := service..NewMessage(m)
 Example of message with conversation context
 
 ```go
-stringContext := `  "context": {
+contextString := `  "context": {
     "conversation_id": "f1ab5f76-f41b-47b4-a8dc-e1c32b925b79",
     "system": {
       "dialog_stack": [
@@ -59,7 +59,7 @@ stringContext := `  "context": {
     },
     "defaultCounter": 0
 }`
-
+cmsBytes := []byte(contextString)
 var contextMessage watson.Context
 err := json.Unmarshal(cmsBytes, &contextMessage)
 
