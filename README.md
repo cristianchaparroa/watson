@@ -40,7 +40,7 @@ Opening message example
 message := "string message to process"
 m := watson.NewMessageRequest(message)
 
-intent, err := service..NewMessage(m)
+intent, err := service.NewMessage(m)
 ```
 
 Example of message with conversation context
@@ -70,5 +70,5 @@ if err != nil {
 message := "string message to process"
 m := watson.NewMessageRequest(message)
 m.Context = contextMessage
-intent, err := service..NewMessage(m)
+intent, err := service.NewMessage(m)
 ```
